@@ -9,13 +9,14 @@
 body {
     width: 20rem;
     background-color: var(--background-color);
+    padding-bottom: 10px;
 }
 
 h1 {
     text-align: center;
     color: var(--text-color);
 }
-
+/*
 .button-container {
     display: flex;
     justify-content: center;
@@ -33,4 +34,53 @@ button {
 
 button:active {
     transform: scale(80%);
+}
+ */
+
+.switch-container {
+    display: flex;
+    justify-content: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--element-color);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--text-color);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--element-addition);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
 }
