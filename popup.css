@@ -9,7 +9,7 @@ body {
     width: 20rem;
     background-color: var(--background-color-light);
     padding-bottom: 10px;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 h1 {
