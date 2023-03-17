@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "Darker Dark Darkness",
   "version": "1.0",
+  "permissions": ["activeTab"],
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",
@@ -10,5 +11,8 @@
   },
   "action": {
     "default_popup": "popup.html"
+  },
+  "background":{
+    "service-worker": "scripts/background.js"
   }
 }

@@ -1,41 +1,21 @@
 :root {
-    --background-color: #2B1C2F;
-    --element-color: #143F46;
-    --element-addition: #2A695E;
-    --text-addition: #8D8171;
-    --text-color: #CBB89A;
+    --background-color-dark: #2B1C2F;
+    --background-color-light: #AF9B91;
+    --sun-color: #FFB703;
+    --accent-color: #FFFFFF;
 }
 
 body {
     width: 20rem;
-    background-color: var(--background-color);
+    background-color: var(--background-color-light);
     padding-bottom: 10px;
+    transition: 0.4s;
 }
 
 h1 {
     text-align: center;
-    color: var(--text-color);
+    color: var(--accent-color);
 }
-/*
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-button {
-    background-color: var(--element-color);
-    color: var(--text-color);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    transition: transform 0.2s ease;
-}
-
-button:active {
-    transform: scale(80%);
-}
- */
 
 .switch-container {
     display: flex;
@@ -60,7 +40,7 @@ button:active {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--element-color);
+    background-color: var(--accent-color);
     transition: .4s;
     border-radius: 34px;
 }
@@ -72,15 +52,16 @@ button:active {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--text-color);
+    background-color: var(--sun-color);
     transition: .4s;
     border-radius: 50%;
 }
 
-input:checked + .slider {
-    background-color: var(--element-addition);
+input:checked + .slider:before {
+    background-color: var(--background-color-dark);
+    transform: translateX(26px);
 }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
+input:checked + body {
+    background-color: var(--background-color-dark)
 }
