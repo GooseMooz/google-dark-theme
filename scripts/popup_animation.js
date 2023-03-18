@@ -1,8 +1,11 @@
-function checkboxFunction() {
-    const checkbox = document.querySelector("input[type=checkbox]")
+const checkbox = document.querySelector("input[type=checkbox]")
+const body = document.querySelector("body")
+
+checkbox.addEventListener('change', function () {
     if (checkbox.checked) {
-        chrome.tabs.executeScript({
-            code: `document.body.style.backgroundColor = "red";`
-        }).then(r => console.log(r));
+        body.classList.add('dark-mode');
     }
-}
+    else {
+        body.classList.remove('dark-mode');
+    }
+});
