@@ -1,7 +1,7 @@
 const checkbox = document.querySelector("input[type=checkbox]")
 const body = document.querySelector("body")
 function changeBGColor (color) {
-    const old_col = documejt.body
+    //const old_col = document.body
     document.body.style.backgroundColor = color
 }
 
