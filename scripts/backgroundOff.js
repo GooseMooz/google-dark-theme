@@ -8,7 +8,6 @@ function resetBGColor () {
 
 document.querySelector("html").style.filter = ""
 resetBGColor()
-console.log('boba')
 
 window.addEventListener('scroll', () => {
     resetBGColor()
